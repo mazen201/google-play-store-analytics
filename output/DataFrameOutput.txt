@@ -1,0 +1,264 @@
+Original Schema
+root
+ |-- App: string (nullable = true)
+ |-- Category: string (nullable = true)
+ |-- Rating: string (nullable = true)
+ |-- Reviews: string (nullable = true)
+ |-- Size: string (nullable = true)
+ |-- Installs: string (nullable = true)
+ |-- Type: string (nullable = true)
+ |-- Price: string (nullable = true)
+ |-- Content Rating: string (nullable = true)
+ |-- Genres: string (nullable = true)
+ |-- Last Updated: string (nullable = true)
+ |-- Current Ver: string (nullable = true)
+ |-- Android Ver: string (nullable = true)
+
+()
+Updated Schema
+root
+ |-- App: string (nullable = true)
+ |-- Rating: float (nullable = true)
+ |-- Reviews: integer (nullable = true)
+ |-- Size: float (nullable = false)
+ |-- Installs: integer (nullable = false)
+ |-- Type: string (nullable = true)
+ |-- Price: float (nullable = false)
+ |-- Content_Rating: string (nullable = true)
+ |-- Category: string (nullable = true)
+ |-- Year: integer (nullable = false)
+ |-- Version: string (nullable = true)
+
+()
+Q1 --> Most Installed Apps are 
++--------------------+-------------+
+|                 App|TotalInstalls|
++--------------------+-------------+
+|      Subway Surfers|   6000000000|
+|         Google News|   4000000000|
+|    Candy Crush Saga|   3500000000|
+|        Temple Run 2|   3000000000|
+|                 Pou|   2000000000|
+|imo free video ca...|   2000000000|
+|UC Browser - Fast...|   1500000000|
+|             Dropbox|   1500000000|
+|SHAREit - Transfe...|   1000000000|
+|              ROBLOX|    900000000|
++--------------------+-------------+
+
+Time taken: 6763 ms
+
+Q2 --> Top Categories with number of apps are 
++----------------+------------+
+|        Category|NumberOfApps|
++----------------+------------+
+|           Tools|         634|
+|   Entertainment|         448|
+|       Education|         417|
+|         Medical|         324|
+|          Action|         322|
+| Personalization|         280|
+|       Lifestyle|         279|
+|         Finance|         266|
+|          Sports|         261|
+|        Business|         246|
+|     Photography|         236|
+|    Productivity|         235|
+|Health & Fitness|         222|
+|   Communication|         211|
+|          Arcade|         186|
+|      Simulation|         182|
+|        Shopping|         179|
+|          Social|         177|
+|          Dating|         173|
+|News & Magazines|         169|
++----------------+------------+
+
+Time taken: 1862 ms
+
+Q3 --> Top Categories with number of Installation of all apps are 
++--------------------+-----------+
+|            Category|AllInstalls|
++--------------------+-----------+
+|              Arcade| 9836077727|
+|              Casual| 7595478960|
+|              Action| 7424937470|
+|       Communication| 4941915530|
+|    News & Magazines| 4251900550|
+|               Tools| 3526053500|
+|        Productivity| 2742302080|
+|         Photography| 2557893130|
+|              Sports| 2254911465|
+|            Strategy| 1888127500|
+|       Entertainment| 1836869820|
+|              Racing| 1681646020|
+|            Shopping| 1504231540|
+|              Puzzle| 1447771070|
+|     Personalization|  998142930|
+|              Social|  925240475|
+|Adventure;Action ...|  906150000|
+|Video Players & E...|  886762200|
+|    Health & Fitness|  867406220|
+|          Simulation|  690369810|
++--------------------+-----------+
+
+Time taken: 1393 ms
+
+Q4 --> Top Content_Rating with number of Apps are 
++---------------+------------+
+| Content_Rating|NumberOfApps|
++---------------+------------+
+|   Everyone 10+|        6490|
+|           Teen|         868|
+|     Mature 17+|         367|
+|Adults only 18+|           2|
+|        Unrated|           1|
++---------------+------------+
+
+Time taken: 1046 ms
+
+Q5 --> Largest Apps are 
++--------------------+---------+
+|                 App|maxSize_k|
++--------------------+---------+
+|           Post Bank| 102400.0|
+|Draft Simulator f...| 102400.0|
+|Miami crime simul...| 102400.0|
+|The Walking Dead:...| 102400.0|
+|Mini Golf King - ...| 102400.0|
+|Car Crash III Bea...| 102400.0|
+|Stickman Legends:...| 102400.0|
+|Navi Radiography Pro| 102400.0|
+|Gangster Town: Vi...| 102400.0|
+|Talking Babsy Bab...| 102400.0|
+|     Ultimate Tennis| 102400.0|
+|     SimCity BuildIt| 102400.0|
+|          Vi Trainer| 102400.0|
+|Hungry Shark Evol...| 102400.0|
+|   My Talking Angela| 101376.0|
+|       Gangster Town| 101376.0|
+|    Chakra Cleansing| 101376.0|
+|Kill Shot Bravo: ...| 101376.0|
+|        AI Benchmark| 101376.0|
+|Angry Birds POP B...| 101376.0|
++--------------------+---------+
+
+Time taken: 1723 ms
+
+Q6 --> Paid Vs Free count Apps are 
++----+------------+
+|Type|NumberOfApps|
++----+------------+
+|Free|        7149|
+|Paid|         579|
++----+------------+
+
+Time taken: 773 ms
+
+Q7 --> Most Reviewed Apps are 
++--------------------+------------+
+|                 App|TotalReviews|
++--------------------+------------+
+|      Clash of Clans|   179558781|
+|      Subway Surfers|   166331958|
+|    Candy Crush Saga|   156993136|
+|         8 Ball Pool|    99386198|
+|        Clash Royale|    92530298|
+|UC Browser - Fast...|    53140694|
+|        Temple Run 2|    48710930|
+|                 Pou|    41939801|
+|              ROBLOX|    40038379|
+|   My Talking Angela|    39523473|
++--------------------+------------+
+
+Time taken: 1720 ms
+
+Q8 --> Average - Min - Max Size of Apps in Same Category are 
++--------------------+-----------------+--------+--------+
+|            Category|      AverageSize| MinSize| MaxSize|
++--------------------+-----------------+--------+--------+
+|Lifestyle;Pretend...|         102400.0|102400.0|102400.0|
+|Education;Brain G...|          99328.0| 99328.0| 99328.0|
+| Adventure;Education|          94208.0| 94208.0| 94208.0|
+| Arcade;Pretend Play|          93184.0| 93184.0| 93184.0|
+|Health & Fitness;...|          84992.0| 84992.0| 84992.0|
+| Racing;Pretend Play|          74752.0| 74752.0| 74752.0|
+|Racing;Action & A...|70729.14285714286| 16384.0|101376.0|
+|Educational;Creat...|          66560.0| 48128.0| 83968.0|
+| Strategy;Creativity|          64512.0| 64512.0| 64512.0|
+|Role Playing;Pret...|          64307.2| 49152.0| 81920.0|
++--------------------+-----------------+--------+--------+
+
+Time taken: 1374 ms
+
+Q9 --> Top App Installation in each Category are 
++--------------------+--------------------+-------------+
+|            Category|                 App|TotalInstalls|
++--------------------+--------------------+-------------+
+|Video Players & E...|        Video Editor|     10000000|
+|Adventure;Action ...|              ROBLOX|    900000000|
+|           Education|                 TED|     40000000|
+|           Education|Babbel – Learn La...|     40000000|
+|           Education|busuu: Learn Lang...|     40000000|
+|              Trivia|        Trivia Crack|    100000000|
+|     Auto & Vehicles|AutoScout24 - use...|     10000000|
+|     Auto & Vehicles|Android Auto - Ma...|     10000000|
+|Travel & Local;Ac...|Ascape VR: 360° V...|       100000|
+|Simulation;Action...|Dog Run - Pet Dog...|     30000000|
+|Education;Pretend...|      TO-FU Oh!SUSHI|     10000000|
+|       Entertainment|    IMDb Movies & TV|    300000000|
+| Education;Education|           ClassDojo|     30000000|
+|Entertainment;Mus...|                Nick|     60000000|
+|Parenting;Brain G...|My baby Game (Bal...|      1000000|
+|Simulation;Preten...|My Little Pony Ce...|      2000000|
+|Arcade;Action & A...|     Shopkins World!|     20000000|
+|Educational;Creat...|    Coloring & Learn|      5000000|
+| Arcade;Pretend Play|LEGO® Friends: He...|      1000000|
+|Casual;Music & Video|Kids Balloon Pop ...|     20000000|
++--------------------+--------------------+-------------+
+only showing top 20 rows
+
+Time taken: 5059 ms
+
+Q10 --> Number of Apps in Each Year are 
++----+------------+
+|Year|NumberOfApps|
++----+------------+
+|2018|        5061|
+|2017|        1385|
+|2016|         600|
+|2015|         374|
+|2014|         183|
+|2013|          89|
+|2012|          20|
+|2011|          15|
+|2010|           1|
++----+------------+
+
+Time taken: 880 ms
+
+Q11 --> Some Operation on Price of Paid Apps are
++----------------+-----------------+-----+--------+--------+----------------+------------------+
+|        AvgPrice|         AllPrice|count|maxPrice|minPrice|       meanPrice|          STDPrice|
++----------------+-----------------+-----+--------+--------+----------------+------------------+
+|15.0523831263725|8715.329830169678|  579|   400.0|    0.99|15.0523831263725|61.903024408108514|
++----------------+-----------------+-----+--------+--------+----------------+------------------+
+
+Time taken: 257 ms
+
+Q12 --> Most Installed Category in each year are
++----+----------------+-------------+
+|Year|        Category|TotalInstalls|
++----+----------------+-------------+
+|2010|   Entertainment|       100000|
+|2011|          Action|     10000000|
+|2012|Libraries & Demo|     10000000|
+|2013|          Casual|     50011100|
+|2014| Personalization|     72591000|
+|2015|          Arcade|    121670150|
+|2016|          Arcade|    149751000|
+|2017|          Arcade|    400687512|
+|2018|          Arcade|   9156709065|
++----+----------------+-------------+
+
+Time taken: 3317 ms
